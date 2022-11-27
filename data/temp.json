@@ -1,0 +1,20 @@
+[
+    {
+        "categoryName": "Toyota",
+        "categoryId": 1,
+        "description": "One of the most famous brands in the world",
+        "url": "https://global.toyota/pages/global_toyota/mobility/toyota-brand/emblem_ogp_001.png"
+    },
+    {
+        "categoryName": "Suzuki",
+        "categoryId": 2,
+        "description": "One of the most famous brands in the world",
+        "url": "https://www.freepnglogos.com/uploads/suzuki-png-logo/latest-models-world-suzuki-png-logo-0.png"
+    },
+    {
+        "categoryName": "Tata",
+        "categoryId": 3,
+        "description": "One of the most famous brands in the world",
+        "url": "https://cutewallpaper.org/21/tata-logo/TATA-Cars-Logo.webp"
+    }
+]
