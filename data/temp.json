@@ -16,5 +16,41 @@
         "categoryId": 3,
         "description": "One of the most famous brands in the world",
         "url": "https://cutewallpaper.org/21/tata-logo/TATA-Cars-Logo.webp"
+    },
+
+    {
+        "name": "Abdur Rohim",
+        "email": "abdur@rohim.com",
+        "role": "seller"
+    },
+    {
+        "name": "Korim",
+        "email": "korim@kr.com",
+        "role": "seller"
+    },
+    {
+        "name": "Rayhan",
+        "email": "rayhan@ry.com",
+        "role": "seller"
+    },
+    {
+        "name": "solaiman",
+        "email": "solaiman@so.com",
+        "role": "buyer"
+    },
+    {
+        "name": "Mizan",
+        "email": "mizan@mi.com",
+        "role": "buyer"
+    },
+    {
+        "name": "Nuhash",
+        "email": "nuhash@nu.com",
+        "role": "buyer"
+    },
+    {
+        "name": "Riad",
+        "email": "riad@ri.com",
+        "role": "buyer"
     }
 ]

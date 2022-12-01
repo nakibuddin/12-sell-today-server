@@ -17,11 +17,13 @@ async function run () {
     try{
         const categoryCollection = client.db('sell_today').collection('categories');
         const productCollection = client.db('sell_today').collection('products');
+        const userCollection = client.db('sell_today').collection('users');
 
         app.get('/categories',  async(req, res) => {
             const query = {};
             const cursor = categoryCollection.find(query);
             const result = await cursor.toArray();
+            // const result2 = await categoryCollection.find(query).toArray();
             res.send(result);
         })
         
@@ -38,6 +40,14 @@ async function run () {
             const result = await cursor.toArray();
             res.send(result);            
         })
+
+        app.get('/users/:role',  async(req, res) => {
+            const role = req.params.role;
+            const query = {role:role};
+            const result = await userCollection.find(query).toArray();
+            res.send(result);
+        })
+
     }
 
     finally{
