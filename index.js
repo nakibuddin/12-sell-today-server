@@ -38,14 +38,20 @@ async function run () {
             const result = await productCollection.insertOne(product)
             res.send(result);
         })
-        app.get('/products/:email',  async(req, res) => {            
+        app.get('/products/:email',  async(req, res) => {         
             const email = req.params.email;
             console.log(email);
             const query = {email: email}
             const result = await productCollection.find(query).toArray();
-            res.send(result);            
+            res.send(result);     
         })
         
+        app.delete('/products/:id', async(req, res) => {
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)};
+            const result = await productCollection.deleteOne(query);
+            res.send(result);
+        })
         
 
         app.get('/users/:role',  async(req, res) => {
