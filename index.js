@@ -24,8 +24,13 @@ async function run () {
             const query = {};
             const cursor = categoryCollection.find(query);
             const result = await cursor.toArray();
-            // const result2 = await categoryCollection.find(query).toArray();
             res.send(result);
+        })
+        app.get('/categories/:id',  async(req, res) => {            
+            const id = parseInt(req.params.id);
+            const query = {categoryId: id}
+            const result = await productCollection.find(query).toArray();
+            res.send(result);            
         })
         
         app.post('/product', async(req,res) => {
@@ -33,14 +38,15 @@ async function run () {
             const result = await productCollection.insertOne(product)
             res.send(result);
         })
-        
-        app.get('/categories/:id',  async(req, res) => {            
-            const id = parseInt(req.params.id);
-            const query = {categoryId: id}
-            const cursor = productCollection.find(query);
-            const result = await cursor.toArray();
+        app.get('/products/:email',  async(req, res) => {            
+            const email = req.params.email;
+            console.log(email);
+            const query = {email: email}
+            const result = await productCollection.find(query).toArray();
             res.send(result);            
         })
+        
+        
 
         app.get('/users/:role',  async(req, res) => {
             const role = req.params.role;
