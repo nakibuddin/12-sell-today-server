@@ -19,6 +19,7 @@ async function run () {
         const categoryCollection = client.db('sell_today').collection('categories');
         const productCollection = client.db('sell_today').collection('products');
         const userCollection = client.db('sell_today').collection('users');
+        const AdvertiseCollection = client.db('sell_today').collection('AdvertiseProducts');
 
         app.get('/categories',  async(req, res) => {
             const query = {};
@@ -33,6 +34,8 @@ async function run () {
             res.send(result);            
         })
         
+
+
         app.post('/product', async(req,res) => {
             const product = req.body;            
             const result = await productCollection.insertOne(product)
@@ -53,6 +56,16 @@ async function run () {
             res.send(result);
         })
         
+
+
+
+        app.post('/advertise', async(req,res) => {
+            const product = req.body;            
+            const result = await AdvertiseCollection.insertOne(product)
+            res.send(result);
+        })
+
+
 
         app.get('/users/:role',  async(req, res) => {
             const role = req.params.role;
