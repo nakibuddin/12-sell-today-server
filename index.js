@@ -64,6 +64,10 @@ async function run () {
             const result = await AdvertiseCollection.insertOne(product)
             res.send(result);
         })
+        app.get('/advertise', async(req,res) => {
+            const result = await AdvertiseCollection.find({}).toArray();
+            res.send(result);
+        })
 
 
 
