@@ -52,5 +52,33 @@
         "name": "Riad",
         "email": "riad@ri.com",
         "role": "buyer"
+    },
+
+    {
+        "_id":{"$oid":"638373a234d6ee0e3a836e32"},
+        "name":"Toyota Fortuner",
+        "image":"https://4wheelerbd.com/wp-content/uploads/2020/10/toyota-fortuner-gray-2.jpg",
+        "categoryName":"Toyota",
+        "categoryId":{"$numberInt":"1"},
+        "condition":"Excellent",
+        "purchaseYear":"2019-11-03",
+        "purchasePrice":"15000",
+        "sellingPrice":"9999",
+        "description":"The Toyota Fortuner is a family-sized off-road capable wagon.",
+        "mobile":"16349220448",
+        "location":"Mirpur"
+    },
+    {   "_id":{"$oid":"638396b8d3ac09fcb77bcd0d"},
+        "name":"TATA Altroz",
+        "image":"https://imgd-ct.aeplcdn.com/1056x660/n/z38npta_1503521.jpg?q=75",
+        "categoryName":"Tata",
+        "categoryId":{"$numberInt":"3"},
+        "condition":"Good",
+        "purchaseYear":"2018-11-29",
+        "purchasePrice":"10000",
+        "sellingPrice":"7000",
+        "description":"Tata has been a reliable company for many years. The all-new Tata Altroz is a subcompact car/supermini vehicle.",
+        "mobile":"01726736873",
+        "location":"Demra"
     }
 ]

@@ -43,7 +43,6 @@ async function run () {
         })
         app.get('/products/:email',  async(req, res) => {         
             const email = req.params.email;
-            console.log(email);
             const query = {email: email}
             const result = await productCollection.find(query).toArray();
             res.send(result);     
@@ -68,7 +67,12 @@ async function run () {
             const result = await AdvertiseCollection.find({}).toArray();
             res.send(result);
         })
-
+        app.delete('/advertise/:id', async(req, res) => {
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)};
+            const result = await AdvertiseCollection.deleteOne(query);
+            res.send(result);
+        })
 
 
         app.get('/users/:role',  async(req, res) => {
@@ -96,7 +100,7 @@ run().catch(err => console.error('my_database_error: ', err));
 
 
 app.get('/', (req, res) => {
-    res.send('welcome from server');
+    res.send('welcome from Sell Today Server');
 })
 
 app.listen(port, () => console.log(`server is running on port ${port}`));
